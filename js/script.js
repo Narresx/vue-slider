@@ -18,6 +18,8 @@ const root = new Vue({
     },
 
     methods: {
+        isActive() {
 
+        },
     },
 });
