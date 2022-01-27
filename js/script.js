@@ -10,18 +10,22 @@ const root = new Vue({
 
     data: {
 
-        images: {
-            image1: 'images/image1.jpg',
-            image2: 'images/image2.jpg',
-            image3: 'images/image3.jpg',
-            image4: 'images/image4.jpg',
-        },
-        currentIndex: undefined,
-        index: 0,
+        actualIndex: 0,
+        images: [
+            'images/image1.jpg',
+            'images/image2.jpg',
+            'images/image3.jpg',
+            'images/image4.jpg',
+        ],
     },
 
     methods: {
-        isActive() {  // Funzione che aggiunge la classe active al pallino corrente
+        isActive(index) {  // Funzione che aggiunge la classe active al pallino corrente se è vera o falsa
+            if (index === this.actualIndex) {
+                return true;
+            } else {
+                return false;
+            }
         },
     },
 });
