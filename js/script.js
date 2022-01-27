@@ -2,6 +2,8 @@ console.log('JS OK');
 
 console.log('Vue ok', Vue);
 
+Vue.config.devtools = true;
+
 const root = new Vue({
 
     el: '#root',
@@ -13,10 +15,9 @@ const root = new Vue({
             image3: 'images/image3.jpg',
             image4: 'images/image4.jpg',
         },
-
     },
 
     methods: {
 
     },
-})
+});
