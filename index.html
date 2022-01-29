@@ -27,7 +27,8 @@
           <div class="slider d-flex align-items-center">
             <img v-for="(image, index) in images" v-if="actualIndex === index" class="img-fluid" :src="image" />
             <div class="slider-dots">
-              <div v-for="(image, index) in images" class="dot mx-2" :class="{active: isActive(index)}">
+              <div v-for="(image, index) in images" @click="selectImg(index)" class="dot mx-2"
+                :class="{active: isActive(index)}">
               </div> <!-- Puntini -->
             </div>
           </div>

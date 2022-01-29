@@ -34,6 +34,10 @@ const root = new Vue({
 
         nextImg() {       //  Funzione che aumenta l'attuale index, così da poter cambiare l'immagine
             this.actualIndex++;
+        },
+
+        selectImg(index) {
+            this.actualIndex = index; // Funzione che riassegna il actualIndex e lo pone uguale all'index
         }
     },
 });
