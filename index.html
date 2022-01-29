@@ -21,7 +21,7 @@
     <div class="container vh-100">
       <div class="row">
         <div class="col-3 d-flex align-items-center justify-content-center">
-          <i class="fas fa-angle-left fa-4x"></i> <!-- Freccetta a sinista -->
+          <i class="fas fa-angle-left fa-4x" @click="prevImg"></i> <!-- Freccetta a sinista -->
         </div>
         <div class="col-6">
           <div class="slider d-flex align-items-center">
@@ -33,7 +33,7 @@
           </div>
         </div>
         <div class="col-3 d-flex align-items-center justify-content-center">
-          <i class="fas fa-angle-right fa-4x"></i> <!-- Freccetta a destra -->
+          <i class="fas fa-angle-right fa-4x" @click="nextImg"></i> <!-- Freccetta a destra -->
         </div>
       </div>
     </div>

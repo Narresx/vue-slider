@@ -27,5 +27,13 @@ const root = new Vue({
                 return false;
             }
         },
+
+        prevImg() {       // Funzione che diminuisce l'attuale index, così da poter cambiare l'immagine
+            this.actualIndex--;
+        },
+
+        nextImg() {       //  Funzione che aumenta l'attuale index, così da poter cambiare l'immagine
+            this.actualIndex++;
+        }
     },
 });
