@@ -29,11 +29,13 @@ const root = new Vue({
         },
 
         prevImg() {       // Funzione che diminuisce l'attuale index, così da poter cambiare l'immagine
-            this.actualIndex--;
+            if (this.actualIndex === 0) this.actualIndex = this.images.length - 1; // se l'actualIndex è 0 faccio ripartire lo slider dall'ultimo elemnto dell'array images
+            else this.actualIndex--;
         },
 
         nextImg() {       //  Funzione che aumenta l'attuale index, così da poter cambiare l'immagine
-            this.actualIndex++;
+            if (this.actualIndex === this.images.length - 1) this.actualIndex = 0; // se l'actualIndex è all'ultimo elemento dell'array images lo faccio ripartire da zero
+            else this.actualIndex++;
         },
 
         selectImg(index) {
